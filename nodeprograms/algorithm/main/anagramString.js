@@ -24,7 +24,7 @@
  * 5)else show not anagrams
  *****************************************************************************/
 var readline = require('readline');
-var utility=require('../utility/utility');
+var utility=require('../utility/utility.js');
 var read = readline.createInterface(
 {
     input: process.stdin,

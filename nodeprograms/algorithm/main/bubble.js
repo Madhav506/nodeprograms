@@ -1,6 +1,6 @@
 var prompt = require('prompt-sync')();
 var utility=require('../utility/utility');
-function bubblenum()
+function bubbleSort()
 {
    var num=prompt("enter size of an array: ");
    var arr=new Array(num);
@@ -8,7 +8,7 @@ function bubblenum()
    {
        arr[i]=prompt("enter the element");
    }
-   utility.bubblenum(arr);
+   utility.bubbleSort(arr);
    
 }
-bubblenum();
+bubbleSort();

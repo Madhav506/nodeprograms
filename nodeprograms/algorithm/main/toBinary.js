@@ -1,12 +1,12 @@
 /******************************************************************************
- *  Execution       :   2. default node         cmd> node tempCon.js 
+ *  Execution       :   2. default node         cmd> node primeNumber.js 
  * 
  *  Purpose         :  printing prime numbers between 1 and 1000
  * 
  *  @description    
  * 
- *  @file           : tempCon.js
- *  @overview       : printing temperature in celsius and fahrenheit
+ *  @file           : primeNumber.js
+ *  @overview       : printing prime numbers between 1 and 1000
  *  @author         : Madhav506 <madhavipasupuleti506@gmail.com>
  *  @version        : 1.0
  *  @since          : 31-08-2018
@@ -20,19 +20,11 @@ var read=readline.createInterface(
         output: process.stdout
     }
 );
-function sqrtNum()
+function toBinary()
 {
-    read.question('Enter number to find squareroot ',function(c){
-                if(isNaN(c))
-                {
-                    console.log("please enter numeric value");
-
-                }
-                else{
-
-                    utility.sqrtNum(c);
-                }
+    read.question('Enter a decimal number ',function(number){
+            utility.toBinary(number);
         read.close();
-            });
+});
 }
-sqrtNum();
+toBinary();

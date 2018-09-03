@@ -96,7 +96,7 @@ leapyear: function(year)
     }
 /*this condition prints when int overflows */
 
-    else if(powerN>31)
+    else if(powerN>1000)
     { 
         console.log("overflow occured,please re-enter");
     }

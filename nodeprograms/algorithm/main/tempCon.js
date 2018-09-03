@@ -1,12 +1,12 @@
 /******************************************************************************
- *  Execution       :   2. default node         cmd> node dayWeek.js 
+ *  Execution       :   2. default node         cmd> node tempCon.js 
  * 
  *  Purpose         :  printing prime numbers between 1 and 1000
  * 
  *  @description    
  * 
- *  @file           : dayWeek.js
- *  @overview       : printing dayof the week in ayear
+ *  @file           : tempCon.js
+ *  @overview       : printing temperature in celsius and fahrenheit
  *  @author         : Madhav506 <madhavipasupuleti506@gmail.com>
  *  @version        : 1.0
  *  @since          : 31-08-2018
@@ -20,24 +20,20 @@ var read=readline.createInterface(
         output: process.stdout
     }
 );
-function dayWeek()
+function tempCon()
 {
-    var i;
-    var month,day,year;
-    read.question('Enter a month ',function(month){
-        read.question('Enter day',function(day){
-            read.question('Enter a year ',function(year){
-                if(isNaN(temp))
+    read.question('Enter temperature in celsius ',function(cel){
+        read.question('Enter temperature in fahrenheit',function(fa){
+                if(isNaN(cel,fa))
                 {
                     console.log("please enter numeric value");
 
                 }
                 else{
-            utility.dayWeek(temp);
+            utility.tempCon(cel,fa);
                 }
         read.close();
             });
     });
-});
 }
-dayWeek();
+tempCon();

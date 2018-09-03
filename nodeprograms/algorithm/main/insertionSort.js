@@ -1,6 +1,6 @@
 var prompt = require('prompt-sync')();
 var utility=require('../utility/utility');
-function insertionum()
+function insertionSort()
 {
    var num=prompt("enter size of an array: ");
    var arr=new Array(num);
@@ -8,7 +8,7 @@ function insertionum()
    {
        arr[i]=prompt("enter the element");
    }
-   utility.insertionum(arr);
+   utility.insertionSort(arr);
    
 }
-insertionum();
+insertionSort();
