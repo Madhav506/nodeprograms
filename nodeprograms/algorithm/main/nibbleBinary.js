@@ -23,7 +23,7 @@ var read=readline.createInterface(
 function toBinary()
 {
     read.question('Enter a number ',function(number){
-            utility.binary(number);
+     utility.binary(number);
         read.close();
 });
 }

@@ -12,6 +12,13 @@
  *  @since          : 31-08-2018
  *
  ******************************************************************************/
+/*****************************************************************************
+ * Algorithm
+ * take user input for range
+ * print the prime numbers between that range
+ * print the palindromes in that range
+ * print the anagrams in that range
+ ******************************************************************************/
 var readline=require('readline');
 var utility=require('../utility/utility');
 var read=readline.createInterface(
@@ -22,12 +29,9 @@ var read=readline.createInterface(
 );
 function primeAnaPal()
 {
-    read.question('Enter starting range to check palindrome and prime',function(max){
-        read.question('Enter ending range to check palindrome and prime',function(min){
-
-            utility.primeAnaPal(max,min);
+    read.question('Enter the range ',function(max){
+            utility.primeAnaPal(max);
         read.close();
     });
-});
 }
 primeAnaPal();

@@ -1,5 +1,5 @@
 /******************************************************************************
- *  Execution       :   2. default node         cmd> node tempCon.js 
+ *  Execution       :   12. default node         cmd> node tempCon.js 
  * 
  *  Purpose         :  printing prime numbers between 1 and 1000
  * 

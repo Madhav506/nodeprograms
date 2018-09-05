@@ -12,6 +12,13 @@
  *  @since          : 31-08-2018
  *
  ******************************************************************************/
+/********************************************************************************
+ * Algorithm:
+ * read the range 0  and max between which you want to obtain prime numbers
+ * intialize the variables flag with 0
+ * if the number modulus 2 is 0 its not a prime number and flag increements
+ * if not its flag value will be changed to 1 and will be printed as prime number
+ *********************************************************************************/
 var readline=require('readline');
 var utility=require('../utility/utility');
 var read=readline.createInterface(
@@ -23,11 +30,9 @@ var read=readline.createInterface(
 function prime()
 {
     var i;
-    read.question('Enter a minimum range ',function(range){
-        read.question('Enter max range',function(range1){
-            utility.prime(range,range1);
+    read.question('Enter a maximum range ',function(range){
+            utility.prime(range);
         read.close();
     });
-});
 }
 prime();

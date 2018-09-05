@@ -1,4 +1,25 @@
-var readline=require('readline');
+/******************************************************************************
+ *  Execution       :   10. default node         cmd> node vendingMachine.js 
+ * 
+ *  Purpose         : calculating the minimum number of Notes as well as the Notes to be returned 
+ *                    by the Vending Machine as a change
+ * 
+ *  @description    
+ * 
+ *  @file           : vendingMachine.js
+ *  @overview       : minimum number of Notes as well as the Notes to be returned 
+ *                    by the Vending Machine as a change
+ *  @author         : Madhav506 <madhavipasupuleti506@gmail.com>
+ *  @version        : 1.0
+ *  @since          : 4-08-2018
+ *
+ ******************************************************************************/
+/********************************************************************************
+ * Algorithm:
+ * taking the userinput money
+ * calculating the money whether it has 1000 notes or 500 or 100 or 50 or 20 or10 or 5 or 2 or 1 rupees
+ * and printing minimum number of notes to be returned.
+ *********************************************************************************/var readline=require('readline');
 var utility=require('../utility/utility');
 var read=readline.createInterface(
     {
@@ -6,16 +27,16 @@ var read=readline.createInterface(
         output: process.stdout
     }
 );
-function Vendingmachine()
+function vendingMachine()
 {
-    var index=0;
-    var notes=[1000,500,100,50,20,10,5,2,1];
 
     read.question('Enter the amount ',function(money){
         
  if(money>0){
+
     
-    var money=utility.Vendingmachine(money,notes,index);
+    utility.VendingMachine(money);
+   // console.log(total);
 }
 else{
     console.log("please enter positive value of amount");
@@ -24,4 +45,4 @@ else{
 
 });
 }
-vendingmachine();
+vendingMachine();

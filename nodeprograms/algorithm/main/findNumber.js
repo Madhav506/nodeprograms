@@ -1,7 +1,7 @@
 
 
 /******************************************************************************
- *  Execution       :   16. default node         cmd> node findNumber.js 
+ *  Execution       :   5. default node         cmd> node findNumber.js 
  * 
  *  Purpose         : code to print find the number
 
@@ -9,7 +9,8 @@
  *  @description    
  * 
  *  @file           : findNumber.js
- *  @overview       : find the number given through command line arguments
+ *  @overview       : find the number that is secretly known to user and asking them some questions and print the secret number
+ *   
  *  @author         : Madhav506 <madhavipasupuleti506@gmail.com>
  *  @version        : 1.0
  *  @since          : 3-08-2018
