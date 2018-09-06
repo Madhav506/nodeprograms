@@ -21,29 +21,45 @@
      var d=parseInt(day);
      var y=parseInt(year);
 
- if(isNaN(month,day,year))
- {
-    console.log("please enter numeric values");
-
- }
- if(day>31 || day<1)
- {
-     console.log("please enter valid date ");
-     return;
- }
- if(month>12 || month<1)
- {
-     console.log("please enter valid month");
-     return;
- }
- if(year>10000 || year<100)
- {
-     console.log("please enter valid year");
-     return;
- }
-
- else{
-     
-    utility.dayWeek(m,d,y);
- }
- 
+     if(day>=1 && day<32 && month>=1 && month<13)
+     {   
+         if(year%4==0 && year%100!=0 || year%400==0)
+         {
+             utility.dayWeek(month,day,year);
+         }
+             else if(day>=29 && month==2)
+             {
+                 console.log("invalid,please enter valid input");
+             }
+                 else if((month==4 || month==6 || month==9 || month==11) && day>=31)
+                 {if(day>=1 && day<32 && month>=1 && month<13)
+                     {   
+                         if(year%4==0 && year%100!=0 || year%400==0)
+                         {
+                             utility.dayWeek(month,day,year);
+                         }
+                             else if(day==29 && month==2)
+                             {
+                                 console.log("invalid,please enter valid input");
+                             }
+                                 else if((month==4 || month==6 || month==9 || month==11) && day>=31)
+                                 {
+                                     console.log("invalid,please enter valid input");
+                                 }
+                         else
+                             utility.dayWeek(month,day,year);
+                     }    
+                     else
+                     {
+                         console.log("invalid,please enter valid input");
+                     }        
+                     console.log("invalid,please enter valid input");
+                 }
+         else
+             utility.dayWeek(month,day,year);
+     }    
+     else
+     {
+         console.log("invalid,please enter valid input");
+     }        
+             

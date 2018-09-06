@@ -26,10 +26,10 @@ function bubbleSort()
 {
    var num=prompt("enter size of an array: ");
    var arr=new Array(num);
-   for(i=0;i<num;i++)
-   {
-       arr[i]=prompt("enter the element");
-   }
+   //for(i=0;i<num;i++)
+   //{
+     //  arr[i]=prompt("enter the element");
+   //}
    utility.bubbleSortNum(num);
    
 }

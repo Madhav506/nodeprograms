@@ -29,19 +29,23 @@ var read=readline.createInterface(
 );
 function vendingMachine()
 {
-
+    var a=/[a-zA-Z]/g;
+    var b=/[-!$%^&*()_+|~=`{}[:;<>?,.@#\]]/g;//to exclude these characters
     read.question('Enter the amount ',function(money){
         
  if(money>0){
 
-    
+if(money.search(a)==-1 && money.search(b)==-1)
+{
     utility.VendingMachine(money);
    // console.log(total);
 }
+ }
 else{
-    console.log("please enter positive value of amount");
+    console.log("please enter valid of amount");
 }
     read.close();
+
 
 });
 }

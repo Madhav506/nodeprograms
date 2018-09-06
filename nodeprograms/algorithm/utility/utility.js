@@ -279,6 +279,7 @@ binarySearchNum:function(size)
                 arr[j+1]=arr[j];
                 j--;
             }
+
             arr[j+1]=key;
         }
         console.log(arr);
@@ -351,13 +352,14 @@ insertionSortString:function(size){
         console.log();
       for(i=0;i<size;i++)
        {
+
            arr[i]=parseInt(prompt("Enter the element "));
+
        }
         var n=arr.length-1;
         for(var i=0;i<n;i++)
         {      
              // Last i elements are already in place   
-
             for(var j=0;j<n-i;j++)
             {
                 if(arr[j]>arr[j+1])
@@ -422,15 +424,20 @@ insertionSortString:function(size){
     
 dayWeek: function(month,day,year){
     {
-    var a=(14 - month);
-    var year1 = year - Math.floor(a/12);
+         a = (Math.floor((14 - month) / 12));
+         a = parseInt(a);
 
-    var x = year1 + Math.floor(year1/4)- Math.floor(year1/100) + Math.floor(year1/400);
+        year1 = year - a;
+
+        month1 = ((month + (12*a)) -2);
+        month1 = parseInt(month1);
+
+        day1 = ((day + year1 + Math.floor(year1 / 4) - Math.floor(year1 / 100)
+               + Math.floor(year1 / 400) + Math.floor((31 * month1) / 12)) % 7);
 
 
-    var month1 = month + 12* (Math.floor(a/12))-2;
+        day1= parseInt(day1);
 
-    var day1 = Math.floor((day + x +((31*month1 ))/ 12) % 7);
     console.log(day1);
     }
     switch(day1)
@@ -552,7 +559,7 @@ binary :function(number)
 
     y=parseInt(x);
     
-    while(y>0)
+    while(y>0)//converting binary to decimal
     {
         var rem = (y%10);
        var out = out + (rem)*Math.pow(2,count++);
