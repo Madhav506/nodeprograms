@@ -185,15 +185,12 @@ printList()
         str += curr.element + " ";
         curr = curr.next;
     }
-    console.log(str);
+    //console.log(str);
+    return str;
+    
 }
 
 
-    // Helper Methods
-    // isEmpty
-    // size_Of_List
-    // PrintList
 }
-
-
 module.exports=LinkedList;
+
