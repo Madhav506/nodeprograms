@@ -1,4 +1,4 @@
-var utility=require('../utility/utility');
+var utility=require('../utility/linkedLists');
 fs=require('fs');
 var data=fs.readFileSync('/home/bridgeit/Madhavi_p/nodeprograms/datastructures/main/file2.txt','utf8');
 console.log(data);

@@ -7,7 +7,7 @@ class Node {
     }
 }
 // linkedlist class
-class LinkedList {
+class hash {
     constructor()
     {
         this.head = null;
@@ -189,26 +189,8 @@ printList()
     return str;
     
 }
- GetElement(index) 
-    { 
-        var current =this.head; 
-        var count = 0; /* index of Node we are 
-                          currently looking at */
-        while (current != null) 
-        { 
-            if (count == index) 
-                return current.element; 
-            count++; 
-            current = current.next; 
-        } 
-  
-        /* if we get to this line, the caller was asking 
-        for a non-existent element so we assert fail */
-       
-        return 0; 
-    } 
 
 
 }
-module.exports=LinkedList;
+module.exports=hash;
 
