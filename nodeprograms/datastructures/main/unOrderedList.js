@@ -1,4 +1,4 @@
-var utility=require('../utility/utility');
+var utility=require('../utility/linkedLists.js');
 fs=require('fs');
 var data=fs.readFileSync('/home/bridgeit/Madhavi_p/nodeprograms/datastructures/main/file1.txt','utf8');
 //console.log(data);
@@ -40,6 +40,7 @@ else{
 }
 string=list.printList();
 console.log(string);
+/*writefilesync function overwrites the data in file*/ 
 fs.writeFileSync('/home/bridgeit/Madhavi_p/nodeprograms/datastructures/main/file1.txt',string) ;
 
 read.close();

@@ -1,44 +1,50 @@
-module.exports=class Bank{
-    constructor(){
-        this.balance=10000;
-        this.persons=[];
-        this.count=0;
-    }
-    queue(p){
-        this.persons.push(p);
-        this.count++;
-    }
-    dequeue(){
-        this.persons.shift();
-        this.count--;
-    }
-    cashdeposit(readlinesyc){
-            var amnt=readlinesyc.question("enter the amount you want to deposit ");
-            if(isNaN(amnt)){
-                console.log("inavlid input,try again")
-                this.cashdeposit(readlinesyc);
-            }
-            this.balance+=parseInt(amnt);
-            //console.log("Balance after deposit is "+this.balance)
-    }
-        withdraw(readlinesync){
-            var amnt=readlinesync.question("enter amount you want to withdraw ");
-             if(isNaN(amnt)){
-                console.log("inavlid input,try again")
-                this.withdraw(readlinesyc);
-            }
-            if(amnt<this.balance){
-                console.log("insufficient balance :( ")
-            }
-            this.balance-=parseInt(amnt);
-             //console.log("Balance after withdrawal  is "+this.balance)
+
+       class Queue 
+       {
+        // Array is used to implement a Queue
+        constructor() {
+            this.items = [];
         }
-        checkbalance(){
-            console.log("The balance is "+this.balance);
-        }
-        isEmpty(){
-            return this.count;
-        }
-    }
     
+        
+        enqueue(element) {
+            // adding element to the queue
+            this.items.push(element);
+        }
+        dequeue() {
+            // removing element from the queue
+            // returns underflow when called 
+            // on empty queue
+            if (this.isEmpty())
+
+                return "Underflow";
+
+            return this.items.shift();
+        }
+        front() {
+            // returns the Front element of 
+            // the queue without removing it.
+            if (this.isEmpty())
+
+                return "No elements in Queue";
+                
+            return this.items[0];
+        }
+        isEmpty() {
+            // return true if the queue is empty.
+            return this.items.length == 0;
+        }
+        printQueue() {
+            var str = "";
+            for (var i = 0; i < this.items.length; i++)
+                str += this.items[i] + " ";
+            return str;
+        }
+        length() {
+            return this.items.length;
+        }
+    }
+    module.exports=Queue;
     
+   
+

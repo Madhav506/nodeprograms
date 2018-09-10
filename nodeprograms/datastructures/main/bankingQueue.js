@@ -1,39 +1,48 @@
-var readlineSync = require('readline-sync');
+var prompt = require('prompt-sync')()
+var utility= require('../utility/queue.js')
+function cashCounter()
+{
+    
+    var queue = new  utility();
+    // Testing dequeue and pop on an empty queue
+    if(queue.isEmpty())
+    {
+        console.log("queue is empty");
+    }
+    else{
 
-var utility = require('../utility/queue.js')
-function transaction() {
-    var cashObj = new utility();
-    var persons = readlineSync.question("enter no of persons in the queue at present ")
-    if (isNaN(persons)) {
-        console.log("enter number of persons,try again..")
-        transaction();
+        console.log("queue not empty");
+
     }
-    for (var i = 0; i < persons; i++) {
-        cashObj.queue(i);
+    var minimumamount = 1000;
+    var customers = prompt("Enter number of customers : ");
+    for (var i = 0; i < customers; i++) {
+        queue.enqueue(i);
     }
-    while (cashObj.isEmpty() > 0) {
-        var sel = readlineSync.question("enter your choice of 1.deposit 2.withdrawal 3.checkbalance-->")
-        switch (sel) {
-            case '1': cashObj.cashdeposit(readlineSync);
-                break;
-            case '2': cashObj.withdraw(readlineSync);
-                break;
-            case '3': cashObj.checkbalance();
-                break;
-            default: console.log("invalid input,try again...")
-        }
-            cashObj.dequeue();
-        var add = readlineSync.question("Do you need to add persons to the queue Y:yes N:No-->")
-        if (add == 'Y' || add=='y') {
-            var number = readlineSync.question("enter number of persons u want to add: ")
-            for (var i = 0; i < number; i++) {
-                cashObj.queue(i)
+    //console.log(q.len());
+
+    while (queue.length()) {
+        var option = prompt("Enter 1 to withdraw and 2 to deposit amount: ");
+        if (option == 1) {
+            var withdraw_amt = prompt("Enter the amount to be withdrawn: ");
+            if (minimumamount >= withdraw_amt) {
+                var balance = minimumamount - withdraw_amt;
+                console.log("available balanace= " + balance);
             }
-
+            else{
+                console.log("you have insufficient balance");
+            }
         }
-    }
-    if (cashObj.isEmpty() == 0) {
-        console.log("Queue is empty..Transaction done ")
+        else if (option == 2) {
+            var dep_amt = prompt("Enter the amount to be deposited: ");
+            balance = Number(minimumamount) + Number(dep_amt);
+            console.log("available balance= " + balance);
+        }
+
+        queue.dequeue();
+
+
     }
 }
-transaction();
+
+cashCounter()
