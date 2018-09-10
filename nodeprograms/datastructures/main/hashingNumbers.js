@@ -22,6 +22,7 @@ function hashing()
 read.question('Enter the element to search: ',function(element){
 
 var list=new utility();
+
 //list.add(data);
 
 var array = new Array();
