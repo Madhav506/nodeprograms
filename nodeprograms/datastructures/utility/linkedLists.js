@@ -208,6 +208,35 @@ printList()
         return 0; 
     } 
 
+    /* function to insert a element in a list. */
+    insertSort(element) 
+    { 
+          
+        var node = new Node(element);
+    
+        /* Special case for head node */
+        if (this.head == null || this.head.element >= node.element) 
+        { 
+            node.next = this.head; 
+           this.head = node; 
+        } 
+        else { 
+    
+           /* Locate the node before point of insertion. */
+          var current = this.head; 
+    
+           while (current.next != null && 
+                  current.next.element < node.element) 
+                 current = current.next; 
+    
+               //  console.log(current.next.element);
+                 
+    
+           node.next = current.next; 
+           current.next = node; 
+        } 
+    
+    }
 
 }
 module.exports=LinkedList;

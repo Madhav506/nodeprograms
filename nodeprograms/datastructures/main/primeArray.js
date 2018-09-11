@@ -13,22 +13,6 @@
  *  @since          : 28-08-2018
  *
  ******************************************************************************/
-/*var prompt = require('prompt-sync')();
-var utility = require('../utility/2Dutility.js');
-var re = /[a-zA-Z]/g;
-var re2 = /[!@#$%^&*().<>+-/*"'`~]/g;
-function prime() {
-    var r1 = prompt(' Enter range1 ');
-    var r2 = prompt(' Enter range2 ');
-    if(r1.search(re) == -1 && r1.search(re2) == -1 && r1 >= 0 && r2 > 0 && r1 < 1001 && r2 < 1001) {
-        
-         r1 = parseInt(r1);
-         r2 = parseInt(r2);
-     utility.primeArray(r1,r2);
-
-        }
-    }
- prime();*/
  var readline = require('readline');
 var utility=require('../utility/utilityPrime1.js');
 var read = readline.createInterface(
@@ -51,6 +35,9 @@ if(range1.search(reg) == -1 && range1.search(reg2) == -1 && range1 >= 0 && range
    range1 = parseInt(range1);
    range2 = parseInt(range2);
    utility.primeArray(range1,range2);
+     }
+     else{
+       console.log("please enter only numbers ");
      }
 
  read.close();

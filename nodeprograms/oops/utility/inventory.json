@@ -1,0 +1,53 @@
+{
+    "rice": [
+        {
+            "name": "Brownrice",
+            "weight": 20,
+            "price": 200
+        },
+        {
+            "name": "Whiterice",
+            "weight": 10,
+            "price": 100
+        },
+        {
+            "name": "Basmatirice",
+            "weight": 25,
+            "price": 300
+        }
+    ],
+    "pulses": [
+        {
+            "name": "Blackgram",
+            "weight": 10,
+            "price": 250
+        },
+        {
+            "name": "Greengram",
+            "weight": 15,
+            "price": 300
+        },
+        {
+            "name": "lentil",
+            "weight": 10,
+            "price": 200
+        }
+    ],
+    "wheat": [
+        {
+            "name": "emmer",
+            "weight": 10,
+            "price": 250
+        },
+        {
+            "name": "barley",
+            "weight": 15,
+            "price": 100
+        },
+        {
+            "name": "rye",
+            "weight": 10,
+            "price": 250
+        }
+    ]
+}
