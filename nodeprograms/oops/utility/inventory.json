@@ -1,17 +1,17 @@
 {
     "rice": [
         {
-            "name": "Brownrice",
+            "name": "Brown Rice",
             "weight": 20,
             "price": 200
         },
         {
-            "name": "Whiterice",
+            "name": "White Rice",
             "weight": 10,
             "price": 100
         },
         {
-            "name": "Basmatirice",
+            "name": "Basmati Rice",
             "weight": 25,
             "price": 300
         }
@@ -28,24 +28,24 @@
             "price": 300
         },
         {
-            "name": "lentil",
+            "name": "Lentil",
             "weight": 10,
             "price": 200
         }
     ],
     "wheat": [
         {
-            "name": "emmer",
+            "name": "Emmer Wheat",
             "weight": 10,
             "price": 250
         },
         {
-            "name": "barley",
+            "name": "Barley",
             "weight": 15,
             "price": 100
         },
         {
-            "name": "rye",
+            "name": "Rye",
             "weight": 10,
             "price": 250
         }

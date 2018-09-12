@@ -1,0 +1,20 @@
+{
+    "stock": [
+        {
+            "name": "Amazon",
+            "share": 2,
+            "price": 2000000
+        },
+        {
+            "name": "google",
+            "share": 5,
+            "price": 5000000
+        },
+        {
+            "name": "Apple Inc",
+            "share": 10,
+            "price": 25000000
+        }
+    ]
+
+}
