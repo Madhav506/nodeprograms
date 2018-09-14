@@ -1,3 +1,18 @@
+/******************************************************************************
+ *  Execution       :   4. default node         cmd> node bankingQueue.js 
+ * 
+ *  Purpose         :code to print banking cash counter to deposit and withdraw
+ *  @description    
+ * 
+ *  @file           : bankingQueue.js
+ *  @overview       : code to print banking cash counter to deposit and withdraw
+ * 
+
+ *  @author         : Madhav506 <madhavipasupuleti506@gmail.com>
+ *  @version        : 1.0
+ *  @since          : 8-09-2018
+ *
+ ******************************************************************************/
 var prompt = require('prompt-sync')()
 var utility= require('../utility/queue.js')
 function cashCounter()

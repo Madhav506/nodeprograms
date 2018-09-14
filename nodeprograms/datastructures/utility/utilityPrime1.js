@@ -84,7 +84,7 @@ module.exports =
 
             var arr1 = str1.split('');
             var arr2 = str2.split('');
-            var array1 = removeSpace(arr1);
+            var array1 = removeSpace(arr1);//removing the spaces in array 
             var array2 = removeSpace(arr2);
             function removeSpace(array) {
 
@@ -106,7 +106,7 @@ module.exports =
 
             if (res1.length == res2.length) {
 
-                var output = compare(res1, res2);
+                var output = compare(res1, res2);//compare function to compare two arrays
 
                 function compare(array1, array2) {
 

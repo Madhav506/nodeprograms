@@ -1,10 +1,24 @@
+/******************************************************************************
+ *  Execution       :   2. default node         cmd> node orderedList.js 
+ * 
+ *  Purpose         :code to print  list of numbers to file and save it in file
+ *  @description    
+ * 
+ *  @file           : orderedList.js
+ *  @overview       : code to print  list of numbers to file and save it in file
+
+ *  @author         : Madhav506 <madhavipasupuleti506@gmail.com>
+ *  @version        : 1.0
+ *  @since          : 7-09-2018
+ *
+ ******************************************************************************/
 var utility = require('../utility/linkedLists');
 fs = require('fs');
 var data = fs.readFileSync('/home/bridgeit/Madhavi_p/nodeprograms/datastructures/main/file2.txt', 'utf8');
 
 console.log(data);
 
-datas= data.toString().split(' ');
+datas= data.toString().split(' ');//splitting string to characters using split function
 var data=[];
 for(var i=0;i<datas.length;i++){
 if(datas[i]!='')
@@ -35,7 +49,7 @@ function orderedList() {
         list.add(data[i]);
     }
     console.log("ascending order of list: ");
-    var string = list.printList();
+    var string = list.printList();//print the list
 
     console.log(string);
 
@@ -45,10 +59,11 @@ function orderedList() {
             list.insertSort(parseInt(element));//inserts a element at appropriate position
         }
         else {
-            list.removeElement(parseInt(element));
+            list.removeElement(parseInt(element));//removing elements
         }
         string = list.printList();
         console.log(string);
+        //overwriting list of numbers to file after sorting
         fs.writeFileSync('/home/bridgeit/Madhavi_p/nodeprograms/datastructures/main/file2.txt', string);
 
         read.close();

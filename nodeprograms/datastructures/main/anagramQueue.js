@@ -1,3 +1,17 @@
+/******************************************************************************
+ *  Execution       :   14. default node         cmd> node anagramQueue.js 
+ * 
+ *  Purpose         :code to print anagrams in a queue and printing them 
+ *  @description    
+ * 
+ *  @file           : anagramQueue.js
+ *  @overview       :  code to print anagrams in a queue and printing them  
+
+ *  @author         : Madhav506 <madhavipasupuleti506@gmail.com>
+ *  @version        : 1.0
+ *  @since          : 8-09-2018
+ *
+ ******************************************************************************/
 var readline = require('readline');
 var utility = require('../utility/linkedLists.js');
 var utility2 = require('../utility/queue.js');
@@ -74,7 +88,7 @@ function primeAna() {
         console.log("The anagrams in the list are : " + k);
 
         for (var i = 0; i < x.length; i++) {
-            var m = list.GetElement(i);
+            var m = list.GetElement(i);//get the required element
             queue.enqueue(m);
         }
         var res = queue.printQueue();

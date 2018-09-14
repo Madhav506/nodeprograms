@@ -1,3 +1,18 @@
+/******************************************************************************
+ *  Execution       :   3. default node         cmd> node expressionStack.js 
+ * 
+ *  Purpose         :code to print whether the given expression was balanced or not
+ *  @description    
+ * 
+ *  @file           : expressionStack.js
+ *  @overview       : code to print whether the given expression was balanced or not
+
+ *  @author         : Madhav506 <madhavipasupuleti506@gmail.com>
+ *  @version        : 1.0
+ *  @since          : 7-09-2018
+ *
+ ******************************************************************************/
+
 fs = require('fs');
 var utility = require('../utility/stack.js');
 var readline = require('readline');
@@ -18,12 +33,12 @@ function stack() {
             var ch = exp.charAt(i);
 
             if (ch == '(') {
-                stack.push(i);
+                stack.push(i);//pushing elements in expression to stack 
                 first++;
             }
             else if (ch == ')') {
                 try {
-                    stack.pop();
+                    stack.pop();//popping or removing element from stack
                     last++;
                 }
                 catch (err) {

@@ -1,16 +1,17 @@
 
 /******************************************************************************
- *  Execution       :   9. default node         cmd> node twoDarray.js 
+ *  Execution       :   11. default node         cmd> node primeArray.js 
  * 
- *  Purpose         :code to print 2D array with elements
+ *  Purpose         :code to print 2D array with prime numbers as elements
  * 
  *  @description    
  * 
- *  @file           : twoDarray.js
- *  @overview       : twoDarray module to print elements in a array
+ *  @file           : primeArray.js
+ *  @overview       : code to print 2D array with prime numbers as elements
+
  *  @author         : Madhav506 <madhavipasupuleti506@gmail.com>
  *  @version        : 1.0
- *  @since          : 28-08-2018
+ *  @since          : 6-09-2018
  *
  ******************************************************************************/
  var readline = require('readline');

@@ -1,3 +1,19 @@
+/***************************************************************************
+ *  Execution       :   5. default node         cmd> node palindromeChecker.js 
+ * 
+ *  Purpose         :code to check whether given string is palindrome are not
+ * 
+ *  @description    
+ * 
+ *  @file           : palindromeChecker.js
+ *  @overview       :code to check whether given string is palindrome are not
+
+ *  @author         : Madhav506 <madhavipasupuleti506@gmail.com>
+ *  @version        : 1.0
+ *  @since          : 7-09-2018
+ *
+ ******************************************************************************/
+
 var readlineSync=require('readline-sync');
 
 var utility=require('../utility/palindRome.js');
@@ -18,7 +34,7 @@ function  palinchecker()
     }
     else
     {
-    var str= string.toLowerCase().split('');
+    var str= string.toLowerCase().split('');//converting strings to lowercase if they are given in uppercase
     console.log(str);
 
      removeSpaces(str);
@@ -38,12 +54,13 @@ function  palinchecker()
 
     for(var i=0;i<str1.length;i++)
     {
-        dequeue.addRear(str1[i]);
+        dequeue.addRear(str1[i]);//adding elements in rear
     }
     var flag=true;
     while(dequeue.size()>1 && flag==true)
     {
       var first=dequeue.removeFront();
+
       var last=dequeue.removeRear();
       if (first != last)
        {

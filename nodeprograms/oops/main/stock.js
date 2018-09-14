@@ -1,3 +1,18 @@
+/******************************************************************************
+ *  Execution       :   3. default node         cmd> node stock.js 
+ * 
+ *  Purpose         :   Calculate the value of each stock and the total value
+ * 
+ *  @description    
+ * 
+ *  @file           : stock.js
+ *  @overview       :  Calculate the value of each stock and the total value
+ * 
+ *  @author         : Madhav506 <madhavipasupuleti506@gmail.com>
+ *  @version        : 1.0
+ *  @since          : 11-09-2018.
+ *
+ ******************************************************************************/
 var fs = require('fs');
 var rawdata = fs.readFileSync('/home/bridgeit/Madhavi_p/nodeprograms/oops/utility/stock.json');
 var data = JSON.parse(rawdata);
@@ -9,7 +24,7 @@ console.log("STOCK REPORT");
 console.log("----------------");
 console.log("            ");
 
-
+//for each loop for reading each value in loop
 for (var key in stock) {
     console.log(stock[key]);
     console.log("            ");

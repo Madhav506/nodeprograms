@@ -1,3 +1,17 @@
+/******************************************************************************
+ *  Execution       :  13 . default node         cmd> node anagramStackReverse.js 
+ * 
+ *  Purpose         :code to print anagrams in a stack and printing them in reverse order
+ *  @description    
+ * 
+ *  @file           : anagramStackReverse.js
+ *  @overview       :  code to print anagrams in a stack and printing them in reverse order 
+
+ *  @author         : Madhav506 <madhavipasupuleti506@gmail.com>
+ *  @version        : 1.0
+ *  @since          : 8-09-2018
+ *
+ ******************************************************************************/
 var readline = require('readline');
 var utility = require('../utility/linkedLists.js');
 var utility2 = require('../utility/stack.js');

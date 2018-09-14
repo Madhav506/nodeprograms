@@ -1,3 +1,17 @@
+/******************************************************************************
+ *  Execution       :   6. default node         cmd> node hashingProgram.js 
+ * 
+ *  Purpose         :code to print  list of numbers to file and save it in file using hashing
+ *  @description    
+ * 
+ *  @file           : hashingProgram.js
+ *  @overview       : code to print  list of numbers to file and save it in file using hashing
+
+ *  @author         : Madhav506 <madhavipasupuleti506@gmail.com>
+ *  @version        : 1.0
+ *  @since          : 10-09-2018
+ *
+ ******************************************************************************/
 var prompt = require('prompt-sync')();
 var utility = require('/home/bridgeit/Madhavi_p/nodeprograms/datastructures/utility/hashNumbers.js');
 var fs = require('fs');
@@ -8,7 +22,7 @@ function hashFunc() {
     var data = fs.readFileSync('filehash.txt');
     data = data.toString().split(" ");
     var arr = Array.from(data);
-    arr.sort();
+    arr.sort();//sorting the array
     console.log(arr);
     var val = prompt(" enter a element to search: ");
     for (var i = 0; i < data.length; i++) {
@@ -90,6 +104,7 @@ function hashFunc() {
     for (var k = 0; k < array.length; k++) {
         console.log("a[" + k + "] => " + array[k].join('=>'));
     }
+    //appending data to file
     fs.appendFileSync('/home/bridgeit/Madhavi_p/nodeprograms/datastructures/main/filehash.txt', array.join('-->'), function () { console.log('completed') })
 }
 hashFunc();

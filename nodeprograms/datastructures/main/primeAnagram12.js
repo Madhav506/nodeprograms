@@ -1,3 +1,18 @@
+/******************************************************************************
+ *  Execution       :   12. default node         cmd> node primeAnagram12.js 
+ * 
+ *  Purpose         :code to print  prime numbers in array seperately that are anagrams and not anagrams
+ * 
+ *  @description    
+ * 
+ *  @file           : primeAnagram12.js
+ *  @overview       : code to print  prime numbers in array seperately that are anagrams and not anagrams
+
+ *  @author         : Madhav506 <madhavipasupuleti506@gmail.com>
+ *  @version        : 1.0
+ *  @since          : 8-09-2018
+ *
+ ******************************************************************************/
 var readline = require('readline');
 var utility = require('../utility/utilityPrime1.js');
 var read = readline.createInterface(
@@ -50,12 +65,12 @@ function primeAnagram() {
 
                 var anagram1 = [];
                 var anagNot = [];
-                anagram1 = removeDuplicates(anagram);
+                anagram1 = removeDuplicates(anagram);//removing duplicate anagrams
                 anagNot = removeDuplicates(notAnagram);
                 function removeDuplicates(array) {
                 var unique = [];
                 for (var i = 0; i < array.length; i++) {
-                if (unique.indexOf(array[i]) == -1) {
+                if (unique.indexOf(array[i]) == -1) {//checking for unique elements
 
                             unique.push(array[i]);
                         }
@@ -64,8 +79,8 @@ function primeAnagram() {
                     return unique;
                 }
                 var res = [];
-                res.push(anagram1);
-                res.push(anagNot);
+                res.push(anagram1);//pushing only anagrams to array
+                res.push(anagNot);//pushing which are not anagrams
                 console.log("  ");
                 console.log("Prime which are  anagrams are in 0 index ");
                 console.log("  ");

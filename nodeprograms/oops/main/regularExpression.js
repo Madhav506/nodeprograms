@@ -1,8 +1,21 @@
+/******************************************************************************
+ *  Execution       :   2. default node         cmd> node regularExpression.js 
+ * 
+ *  Purpose         :  printing the modified message in console to the file using regular expression.
+ *  @description    
+ * 
+ *  @file           : regularExpression.js
+ *  @overview       : printing the modified message to the file using regular expressions. 
+ *  @author         : Madhav506 <madhavipasupuleti506@gmail.com>
+ *  @version        : 1.0
+ *  @since          : 10-09-2018.
+ *
+ ******************************************************************************/
 var prompt = require('prompt-sync')();
 fs = require('fs');
 var data = fs.readFileSync('/home/bridgeit/Madhavi_p/nodeprograms/oops/main/fileReg.txt', 'utf8');
 //console.log(data);
-var a = /[a-zA-Z]/g;
+var a = /[a-zA-Z]/g;//regular expression
 var b = /[0-9]/g;
 var c = /[!@#$%^&*()-+><?"']/g;
 var count = 0;
@@ -77,8 +90,8 @@ else {
     console.log("enter 10 digit valid number ");
     return;
 }
-
-var date = new Date();
+//get the current date of the system
+var date = new Date();//creating object for date
 var l = date.getDate();
 var m = date.getMonth();
 var n = date.getFullYear();
@@ -87,6 +100,6 @@ data = data.replace("01/01/2016.", k);
 console.log(data);
 
 
-fs.writeFileSync('/home/bridgeit/Madhavi_p/nodeprograms/oops/main/fileReg.txt', data);
+fs.writeFileSync('/home/bridgeit/Madhavi_p/nodeprograms/oops/main/fileReg.txt', data);//overwriting the data to file using writefileSync method.
 
 

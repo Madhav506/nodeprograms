@@ -1,8 +1,25 @@
-
+/******************************************************************************
+ *  Execution       :   1. default node         cmd> node inventory.js 
+ * 
+ *  Purpose         :  Creating a JSON file having Inventory Details for Rice, Pulses and Wheats 
+                       with properties name, weight,price per kg.
+ * 
+ *  @description    
+ * 
+ *  @file           : inventory.js
+ *  @overview       : Creating a JSON file having Inventory Details for Rice, Pulses and Wheats 
+                      with properties name, weight,price per kg.
+ *  @author         : Madhav506 <madhavipasupuleti506@gmail.com>
+ *  @version        : 1.0
+ *  @since          : 11-09-2018.
+ *
+ ******************************************************************************/
 var fs = require('fs');
+//reading data from json file
 var rawdata = fs.readFileSync('/home/bridgeit/Madhavi_p/nodeprograms/oops/utility/inventory.json');
 var data = JSON.parse(rawdata);
 console.log(data);
+
 var rice = data.rice;
 var pulses = data.pulses;
 var wheat = data.wheat;
