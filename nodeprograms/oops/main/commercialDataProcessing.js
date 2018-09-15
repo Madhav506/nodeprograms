@@ -2,8 +2,6 @@ var fs = require('fs')
 var prompt = require('prompt-sync')();
 
 let data = fs.readFileSync('/home/bridgeit/Madhavi_p/nodeprograms/oops/utility/cDP.json');
-
-
 var arrayOfObjects = JSON.parse(data)
 
 class StockAccount {
@@ -13,7 +11,7 @@ class StockAccount {
         this.shareprice = shareprice;
     }
 
-//to buy shares
+    //to buy shares
     buy() {
         var stock = prompt('enter number of stocks: ');
         for (var i = 1; i <= stock; i++) {
@@ -28,14 +26,13 @@ class StockAccount {
             })
 
             console.log(arrayOfObjects);
-
         }
 
 
     }
     //logic for selling
     sell() {
-        var i = prompt('which index u want to sell ? : ')
+        var i = prompt('which stock index do you want to remove  ')
         delete arrayOfObjects[i];
         console.log(arrayOfObjects);
 

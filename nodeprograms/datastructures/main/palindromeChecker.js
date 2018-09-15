@@ -25,25 +25,23 @@ function  palinchecker()
     var string=readlineSync.question("Enter the string value to for palindrome: ");
    //var string = string.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '');
 
-   
-
-
     if(isNaN(string)==false)
     {
-        console.log("Enter the string value: ");
+        console.log("Enter the string value ");
     }
     else
     {
     var str= string.toLowerCase().split('');//converting strings to lowercase if they are given in uppercase
+   
     console.log(str);
 
-     removeSpaces(str);
+     removeSpaces(str);//function to remove spaces between characters
 
     function removeSpaces(str)
     {
-        for(var i=0;i<str.length;i++)
+        for(var i=0;i<str.length;i++)//loops iterates until string length
         {
-            if(str[i]!=' ')
+            if(str[i]!=' ')//if string not equal to empty space
             {
                 str1.push(str[i]);
             }
@@ -57,6 +55,7 @@ function  palinchecker()
         dequeue.addRear(str1[i]);//adding elements in rear
     }
     var flag=true;
+
     while(dequeue.size()>1 && flag==true)
     {
       var first=dequeue.removeFront();
@@ -71,7 +70,7 @@ function  palinchecker()
           flag = true;
        }
     }
-    if(flag === true)
+    if(flag == true)
     {
         console.log("the given string is a palindrome");
     }

@@ -1,11 +1,11 @@
 /******************************************************************************
  *  Execution       :   14. default node         cmd> node anagramQueue.js 
  * 
- *  Purpose         :code to print anagrams in a queue and printing them 
+ *  Purpose         :code to print anagrams in a queue
  *  @description    
  * 
  *  @file           : anagramQueue.js
- *  @overview       :  code to print anagrams in a queue and printing them  
+ *  @overview       : code to print anagrams in a queue and printing them  
 
  *  @author         : Madhav506 <madhavipasupuleti506@gmail.com>
  *  @version        : 1.0
@@ -22,7 +22,7 @@ var read = readline.createInterface(
     }
 );
 function primeAna() {
-    read.question('Enter the range ', function (range) {
+    read.question('Enter the range.. ', function (range) {
         //utility.primeAna(max);
         var arr = [];
         var arr1 = [];
@@ -42,7 +42,7 @@ function primeAna() {
                 }
             }
 
- if (flag === false) {
+            if (flag === false) {
                 arr.push(i);
 
             }
@@ -58,7 +58,7 @@ function primeAna() {
                 var s2 = '' + parseInt(arr[j]);
                 if ((((s1.split('')).sort()).join()) === (((s2.split('')).sort()).join()))  //compares the 2 strings by sorting & spliting
                 {
-                     console.log(s1 + " and " + s2 + " are anagrams ");
+                    console.log(s1 + " and " + s2 + " are anagrams ");
                     arr1.push(parseInt(s1));
                     var x = removeDuplicates(arr1);
                 }

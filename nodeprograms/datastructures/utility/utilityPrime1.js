@@ -1,16 +1,26 @@
 module.exports =
     {
         primeArray: function (range1, range2) {
+
             var len = (Math.floor(range2 / 100) + 1);
+
             var range = Math.floor(range1 / 100);
+
             var array = [];
+
             min = range1;
+
+            //if low is less than 0 and high is greater than 100 
+
             if (range1 <= 0 && range2 >= 100) {
-                max = 100;
+
+                max = 100; //max will be 100
             }
-            else if (range2 < 100) {
-                max = range2;
-                console.log(max);
+            else if (range2 < 100) {//if high less than 2
+
+                max = range2;//max will be high value 
+
+                console.log(max);//prints max 
             }
 
             else {
@@ -18,14 +28,16 @@ module.exports =
 
             }
 
-            if (min == 0 || min == 1) {
+            if (min == 0 || min == 1) {//if min is 0 or 1 then min is 2
+
                 min = 2;
             }
-            for (var index = range + 1; index <= len; index++) {
+            for (var index = range + 1; index <= len; index++) { //loop iterates until len
                 if ((max - min) <= 100 && max <= range2 && (max - min) != 0) {
+
                     var arr1 = new Array();
 
-                    for (var i = min; i <= max; i++) {
+                    for (var i = min; i <= max; i++) {//prime numbers
                         var count = 0;
                         for (var j = 1; j <= i; j++) {
 
@@ -41,6 +53,8 @@ module.exports =
                         }
                     }
                     array.push(arr1);
+
+                    //if difference of high and max less than 100 then  
                     if (range2 - max <= 100) {
                         range = Math.floor(min / 100);
                         min = (min + ((range + 1) * 100) - min);
@@ -59,6 +73,7 @@ module.exports =
             console.log(array);
 
         },
+//function to print primes  numbers which are anagrams
 
         primeAnagram: function (min, max) {
             var array = new Array();
@@ -80,9 +95,12 @@ module.exports =
             return array;
 
         },
+
+        //function to print anagrams
+
         anagrams: function (str1, str2) {
 
-            var arr1 = str1.split('');
+            var arr1 = str1.split('');//splitting in to characters
             var arr2 = str2.split('');
             var array1 = removeSpace(arr1);//removing the spaces in array 
             var array2 = removeSpace(arr2);
@@ -92,7 +110,7 @@ module.exports =
                 for (let i = 0; i < array.length; i++) {
 
                     if (array[i] != ' ') {
-                        newArray.push(array[i]);
+                        newArray.push(array[i]);//pushing to new array
                     }
 
                 }
@@ -101,7 +119,7 @@ module.exports =
 
             }
 
-            var res1 = array1.sort();
+            var res1 = array1.sort();//sorting array1
             var res2 = array2.sort();
 
             if (res1.length == res2.length) {
@@ -116,7 +134,7 @@ module.exports =
 
                         if (array1[i] == array2[i]) {
 
-                            count++
+                            count++;
                         }
                     }
 

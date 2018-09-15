@@ -2,16 +2,16 @@ class Node {
     // constructor
     constructor(element)
     {
-        this.element = element;
-        this.next = null
+        this.element = element;//holds the data of node
+        this.next = null//holds pointer to next node intialized to null value
     }
 }
 // linkedlist class
 class LinkedList {
     constructor()
     {
-        this.head = null;
-        this.size = 0;
+        this.head = null;//stores first node of list
+        this.size = 0;//indicates no.of nodes in list
     }
  
     // functions to be implemented
@@ -103,7 +103,7 @@ removeFrom(index)
         } 
         else {
             // iterate over the list to the
-            // position to removce an element
+            // position to remove an element
             while (it < index) {
                 it++;
                 prev = curr;
@@ -131,7 +131,7 @@ removeElement(element)
         // comparing element with current
         // element if found then remove the
         // and return true
-        if (current.element === element) {
+        if (current.element ==element) {
             if (prev == null) {
                 this.head = current.next;
             } else {
@@ -173,7 +173,7 @@ isEmpty()
 
     // removeElement(element)
 
-    size_of_list()
+    size_of_list()//to find the size of list
 {
     console.log(this.size);
 }
@@ -189,7 +189,7 @@ printList()
     return str;
     
 }
- GetElement(index) 
+  GetElement(index) 
     { 
         var current =this.head; 
         var count = 0; /* index of Node we are 
@@ -203,7 +203,7 @@ printList()
         } 
   
         /* if we get to this line, the caller was asking 
-        for a non-existent element so we assert fail */
+        for a non-existent element so we  fail */
        
         return 0; 
     } 

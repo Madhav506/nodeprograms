@@ -26,7 +26,7 @@ function stack() {
 
     read.question('enter the expression: ', function (exp) {
         var stack = new utility();
-        var len = exp.length;
+        var len = exp.length;//storing expression length in len variable
         var first = 0, last = 0;
 
         for (var i = 0; i < len; i++) {
@@ -34,23 +34,30 @@ function stack() {
 
             if (ch == '(') {
                 stack.push(i);//pushing elements in expression to stack 
-                first++;
+
+                first++;//balancing from first
+
             }
             else if (ch == ')') {
                 try {
                     stack.pop();//popping or removing element from stack
-                    last++;
+                    
+                    last++;//balancing from last
+
                 }
                 catch (err) {
-                    console.log("unbalanced");
+                    console.log("it is unbalanced Equation");
                 }
             }
         }
+        //if stack is empty and first is equal to last
+        
         if (stack.isEmpty() && (first == last)) {
-            console.log("balanced equation");
+            
+            console.log("it is balanced equation");
         }
         else {
-            console.log("unbalanced equation");
+            console.log("it is unbalanced equation");
         }
 
         read.close();

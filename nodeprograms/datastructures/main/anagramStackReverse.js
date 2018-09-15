@@ -36,11 +36,11 @@ function primeAna() {
             for (var j = 2; j <= i / 2; j++)    //*  This gives all the prime numbers between the given range
 
             {
-                if (i % j === 0) {
+                if (i % j == 0) {
                     flag = true;
                 }
             }
-            if (flag === false) {
+            if (flag == false) {
                 arr.push(i);
 
             }
@@ -55,7 +55,7 @@ function primeAna() {
                 var s2 = '' + parseInt(arr[j]);
                 if ((((s1.split('')).sort()).join()) === (((s2.split('')).sort()).join()))  //compares the 2 strings by sorting & spliting
                 {
-                 console.log(s1 + " and " + s2 + " are anagrams ");
+                    console.log(s1 + " and " + s2 + " are anagrams ");
                     arr1.push(parseInt(s1));
                     var x = removeDuplicates(arr1);
                 }
@@ -84,12 +84,13 @@ function primeAna() {
         console.log("The anagrams in the list are : " + k);
 
         for (var i = 0; i < x.length; i++) {
-            var m = list.GetElement(i);
+            var m = list.GetElement(i);//getElement function to get element
             stack.push(m);
         }
         var res = stack.printStack();
 
         console.log("the anagrams in stack are : " + res);
+
         console.log("The reversed anagrams are : ");
 
 

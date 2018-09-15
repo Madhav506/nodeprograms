@@ -27,7 +27,7 @@ function primeAnagram() {
             var reg = /[a-zA-Z]/g;
             var reg2 = /[!@#$%^&*().<>+-/*"'`~]/g;
             var array = [];
-            if (range1.search(reg) == -1 && range1.search(reg2)==-1 && range1>=0 && range2>0 && range1<1001 && range2<1001) {
+            if (range1.search(reg) == -1 && range1.search(reg2) == -1 && range1 >= 0 && range2 > 0 && range1 < 1001 && range2 < 1001) {
 
                 range1 = parseInt(range1);
                 range2 = parseInt(range2);
@@ -40,11 +40,11 @@ function primeAnagram() {
                 var anagram = [];
                 var notAnagram = [];
 
-                for (var i = 0; i < array.length - 1; i++) {
+                for (var i = 0; i < array.length - 1; i++) {//compares anagrams within all the primes using 2 for loops
 
                     for (var j = i + 1; j < array.length; j++) {
 
-                        index1 = array[i].toString();
+                        index1 = array[i].toString();//converting to string
 
                         index2 = array[j].toString();
 
@@ -52,12 +52,14 @@ function primeAnagram() {
 
                         if (res1) {
                             anagram.push(array[i]);
+
                             anagram.push(array[j]);
                         }
 
                         else {
 
                             notAnagram.push(array[i]);
+
                             notAnagram.push(array[j]);
                         }
                     }
@@ -68,9 +70,9 @@ function primeAnagram() {
                 anagram1 = removeDuplicates(anagram);//removing duplicate anagrams
                 anagNot = removeDuplicates(notAnagram);
                 function removeDuplicates(array) {
-                var unique = [];
-                for (var i = 0; i < array.length; i++) {
-                if (unique.indexOf(array[i]) == -1) {//checking for unique elements
+                    var unique = [];
+                    for (var i = 0; i < array.length; i++) {
+                        if (unique.indexOf(array[i]) == -1) {//checking for unique elements
 
                             unique.push(array[i]);
                         }
@@ -89,7 +91,7 @@ function primeAnagram() {
                 console.log(res);
                 read.close();
             }
-            });
+        });
     });
 }
 primeAnagram();

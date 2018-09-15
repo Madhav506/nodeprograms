@@ -5,8 +5,6 @@
         constructor() {
             this.items = [];
         }
-    
-        
         enqueue(element) {
             // adding element to the queue
             this.items.push(element);

@@ -14,17 +14,15 @@
  *
  ******************************************************************************/
 var prompt = require('prompt-sync')()
-var utility= require('../utility/queue.js')
-function cashCounter()
-{
-    
-    var queue = new  utility();
+var utility = require('../utility/queue.js')
+function cashCounter() {
+
+    var queue = new utility();
     // Testing dequeue and pop on an empty queue
-    if(queue.isEmpty())
-    {
+    if (queue.isEmpty()) {
         console.log("queue is empty");
     }
-    else{
+    else {
 
         console.log("queue not empty");
 
@@ -32,19 +30,23 @@ function cashCounter()
     var minimumamount = 1000;
     var customers = prompt("Enter number of customers : ");
     for (var i = 0; i < customers; i++) {
-        queue.enqueue(i);
+        queue.enqueue(i);//pushing elements to queue
     }
     //console.log(q.len());
 
     while (queue.length()) {
+
         var option = prompt("Enter 1 to withdraw and 2 to deposit amount: ");
+
         if (option == 1) {
             var withdraw_amt = prompt("Enter the amount to be withdrawn: ");
+
+            //if min amnt is greater than or equal to withdraw amount
             if (minimumamount >= withdraw_amt) {
                 var balance = minimumamount - withdraw_amt;
                 console.log("available balanace= " + balance);
             }
-            else{
+            else {
                 console.log("you have insufficient balance");
             }
         }
@@ -54,7 +56,7 @@ function cashCounter()
             console.log("available balance= " + balance);
         }
 
-        queue.dequeue();
+        queue.dequeue();//pop elements in queue
 
 
     }
