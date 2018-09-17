@@ -35,6 +35,7 @@ var read = readline.createInterface(
 function unOrderedList() {
     console.log("");
     read.question('Enter the element to search: ', function (element) {
+        if(isNaN(element)){
 
         var list = new utility();
 
@@ -66,6 +67,10 @@ function unOrderedList() {
         /*writefilesync function overwrites the data in file*/
         fs.writeFileSync('/home/bridgeit/Madhavi_p/nodeprograms/datastructures/main/file1.txt', string);
         console.log(" ");
+    }
+    else{
+        console.log("please enter strings...");
+    }
 
 
         read.close();

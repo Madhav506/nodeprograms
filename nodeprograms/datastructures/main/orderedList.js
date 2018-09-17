@@ -56,6 +56,7 @@ function orderedList() {
 
     read.question('Enter the element to search: ', function (element) {
         //string = list.printList();
+        if(!(isNaN(element))){
 
         if (list.indexOf(element) == -1) {
             list.insertSort(parseInt(element));//inserts a element at appropriate position
@@ -70,7 +71,10 @@ function orderedList() {
         //overwriting list of numbers to file after sorting
         
         fs.writeFileSync('/home/bridgeit/Madhavi_p/nodeprograms/datastructures/main/file2.txt', string);
-
+    }
+    else{
+        console.log("please enter valid input");
+    }
         read.close();
 
     });

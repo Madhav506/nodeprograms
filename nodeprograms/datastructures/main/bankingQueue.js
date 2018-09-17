@@ -42,13 +42,13 @@ function cashCounter() {
             var withdraw_amt = prompt("Enter the amount to be withdrawn: ");
 
             //if min amnt is greater than or equal to withdraw amount
-            if (minimumamount >= withdraw_amt) {
-                var balance = minimumamount - withdraw_amt;
+            if (balance >= withdraw_amt) {
+                var balance = balance - withdraw_amt;
                 console.log("available balanace= " + balance);
             }
-            else {
-                console.log("you have insufficient balance");
-            }
+            //else {
+              //  console.log("you have insufficient balance");
+           // }
         }
         else if (option == 2) {
             var dep_amt = prompt("Enter the amount to be deposited: ");

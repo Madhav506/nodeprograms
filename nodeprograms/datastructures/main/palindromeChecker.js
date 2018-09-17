@@ -22,7 +22,7 @@ function  palinchecker()
     var str1=[];
 
     var dequeue=new utility();
-    var string=readlineSync.question("Enter the string value to for palindrome: ");
+    var string=readlineSync.question("Enter the string value to check for palindrome: ");
    //var string = string.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '');
 
     if(isNaN(string)==false)

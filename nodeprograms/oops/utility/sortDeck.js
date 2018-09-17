@@ -1,5 +1,5 @@
 module.exports={
-    Mysort: function(alphabet){
+    mySort: function(alphabet){
     {
         return function(a, b) {
             var index_a = alphabet.indexOf(a[0]),

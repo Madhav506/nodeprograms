@@ -16,7 +16,7 @@ module.exports =
 
                 max = 100; //max will be 100
             }
-            else if (range2 < 100) {//if high less than 2
+            else if (range2 < 100) {//if high less than 100
 
                 max = range2;//max will be high value 
 

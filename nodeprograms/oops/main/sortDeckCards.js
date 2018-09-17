@@ -19,8 +19,7 @@ var utility2 = require('/home/bridgeit/Madhavi_p/nodeprograms/datastructures/uti
 var list = new utility1();
 var queue = new utility2();
 
-var suit = ["♣", "♦", "♥", "♠"];
-//var  rank =["2","3","4","5","6","7","8","9","10","J","Q","K","A"];
+var suit = ["C(♣)", "D(♦)", "H(♥)", "S(♠)"];
 var rank = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
 var deck = new Array();
 
@@ -59,7 +58,7 @@ for (var i = 0; i < 4; i++) {
         array.push(deck[j]);
     }
 
-    var sorter = utility.Mysort('A23456798910JKQ');
+    var sorter = utility.mySort('A23456798910JKQ');
     array.sort(sorter);
    // console.log("the cards distributed to players are in manner ")
     console.log(array);
@@ -73,7 +72,7 @@ for (var i = 0; i < array2.length; i++) {
     list.add(array2[i]);
 }
 var k = list.printList();
-console.log("The cards distributed to players in list are : " + k);
+console.log("The cards distributed to players in list are :\n " + k);
 
 for (var i = 0; i < array2.length; i++) {
     queue.enqueue(array2[i]);//pushing the array to queue 
@@ -81,4 +80,4 @@ for (var i = 0; i < array2.length; i++) {
 //queue.dequeue(array2[0]);
 
 var res = queue.printQueue();
-console.log("The cards distributed to players  in queue is " + res);
+console.log("The cards distributed to players  in queue is  \n " + res);

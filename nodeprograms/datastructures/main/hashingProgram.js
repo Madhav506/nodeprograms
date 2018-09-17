@@ -31,6 +31,9 @@ function hashing() {
     console.log(data);
     console.log();
     var search = prompt('Enter a number to search : ');
+
+    if(!(isNaN(search))){
+
     console.log("  ");
     if (data.indexOf(search) == -1) {
         console.log(' element not found ');
@@ -54,7 +57,7 @@ function hashing() {
         var str = '';//empty string
         var list = new utility();
         str = str + 'a' + ' [ ' + i + ' ]';
-        for (var j = 0; j<= data.length; j++) {
+        for (var j = 0; j<=data.length; j++) {
 
             if (map1[j] == i) {
 
@@ -74,7 +77,10 @@ function hashing() {
         data2 = data2 + ' ' + data[i];
     }
     fs.writeFileSync('/home/bridgeit/Madhavi_p/nodeprograms/datastructures/main/filehash.txt', data2, 'utf-8');
-
+    }
+    else{
+        console.log("please enter valid integers ");
+    }
 }
 
 hashing();
